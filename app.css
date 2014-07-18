@@ -1,0 +1,11 @@
+.drag {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #e1e1e1;
+}
+/*.tree:empty {
+	content: 'drop something here';
+	height: 20px;
+	background-color: blue;
+}*/

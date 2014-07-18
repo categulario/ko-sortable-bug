@@ -1,9 +1,34 @@
+<!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="app.css">
 	</head>
 	<body>
-		<h1>Hi!</h1>
+		<h3>Instructions</h3>
+
+		<p>Drop <em>poo</em> out of baz</p>
+
+		<div data-bind="template: 'tree'"></div>
+
+		<script type="text/htm" id="tree">
+			<ul class="tree" data-bind="sortable : {
+				data        : items,
+				options     : {
+					placeholder : 'drop-placeholder',
+					delay       : 100,
+					handle      : '.drag',
+					scroll      : true
+				}
+			}">
+				<li class="node">
+					<span class="drag"></span>
+					<span data-bind="text: name"></span>
+					<div data-bind="template: {name: 'tree', data: $data}"></div>
+				</li>
+			</ul>
+		</script>
 
 		<script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src="bower_components/jquery.ui/jquery.min.js"></script>
@@ -15,5 +40,6 @@
 		<script type="text/javascript" src="bower_components/jquery.ui/ui/jquery.ui.selectable.js"></script>
 		<script type="text/javascript" src="bower_components/knockout/dist/knockout.js"></script>
 		<script type="text/javascript" src="bower_components/knockout-sortable/build/knockout-sortable.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
 	</body>
 </html>
