@@ -1,0 +1,10 @@
+{
+		"name": "ko-sortable-bug",
+		"version": "1.0.0",
+		"dependencies": {
+				"jquery": "1.10.x",
+				"jquery.ui": "1.10.x",
+				"knockout": "3.1.x",
+				"knockout-sortable": "0.8.x"
+		}
+}
