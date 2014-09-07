@@ -3,19 +3,22 @@ function MyViewModel() {
 
 	self.items = ko.observableArray([{
 		name: 'foo',
-		items: []
+		items: ko.observableArray([])
 	}, {
 		name: 'var',
-		items: []
+		items: ko.observableArray([])
 	}, {
 		name: 'log',
-		items: []
+		items: ko.observableArray([{
+			name: 'poo',
+			items: ko.observableArray([])
+		}])
 	}, {
 		name: 'baz',
-		items: [{
-			name: 'poo',
-			items: []
-		}]
+		items: ko.observableArray([{
+			name: 'dog',
+			items: ko.observableArray([])
+		}])
 	}]);
 }
 
